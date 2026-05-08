@@ -1,0 +1,92 @@
+/* PALETA */
+:root {
+    --azul-oscuro: #1e3a5f;
+    --azul: #2c5d8f;
+    --gris-claro: #f4f6f9;
+    --blanco: #ffffff;
+}
+
+/* BODY */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--gris-claro);
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: var(--azul-oscuro) !important;
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+    color: var(--blanco) !important;
+}
+
+/* GRID */
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 15px;
+}
+
+/* PRODUCTOS */
+.productos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* TARJETAS */
+.card {
+    background: var(--blanco);
+    padding: 10px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* IMAGEN */
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* TEXTO */
+.card p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--azul-oscuro);
+}
+
+/* EFECTO HOVER (pro) */
+.card:hover {
+    transform: scale(1.03);
+    transition: 0.3s;
+}
+
+/* para TABLET */
+@media (min-width: 576px) {
+    .productos {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .card {
+        width: 48%;
+    }
+}
+
+/* para ESCRITORIO */
+@media (min-width: 992px) {
+    .contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        width: 30%;
+    }
+}
